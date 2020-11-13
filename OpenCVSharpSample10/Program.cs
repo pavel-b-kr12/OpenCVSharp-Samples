@@ -19,16 +19,16 @@ namespace OpenCVSharpSample10
                         var contrast = 100;
 
                         var brightnessTrackbar = sourceWindow.CreateTrackbar(
-                                name: "Brightness", value: brightness, max: 200,
-                                callback: (pos, obj) =>
+								trackbarName: "Brightness", initialPos: brightness, max: 200,
+                                callback: (pos) =>
                                 {
                                     brightness = pos;
                                     updateImageCalculateHistogram(sourceWindow, histogramWindow, src, brightness, contrast);
                                 });
 
                         var contrastTrackbar = sourceWindow.CreateTrackbar(
-                            name: "Contrast", value: contrast, max: 200,
-                            callback: (pos, obj) =>
+							trackbarName: "Contrast", initialPos: contrast, max: 200,
+                            callback: (pos) =>
                             {
                                 contrast = pos;
                                 updateImageCalculateHistogram(sourceWindow, histogramWindow, src, brightness, contrast);

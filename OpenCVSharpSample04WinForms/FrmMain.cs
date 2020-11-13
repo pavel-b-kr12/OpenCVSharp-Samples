@@ -24,19 +24,19 @@ namespace OpenCVSharpSample04WinForms
             using (var iplImage = new Mat(@"..\..\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 Cv2.Dilate(iplImage, iplImage, new Mat());
-
+				/* //UserInterface deleted in 4.2
                 var pictureBoxIpl = new OpenCvSharp.UserInterface.PictureBoxIpl
                 {
                     ImageIpl = iplImage,
                     AutoSize = true
                 };
                 flowLayoutPanel1.Controls.Add(pictureBoxIpl);
+				*/
 
-
-                //How to redraw:
-                //pictureBoxIpl.RefreshIplImage(iplImage);
-            }
-        }
+				//How to redraw:
+				//pictureBoxIpl.RefreshIplImage(iplImage);
+			}
+		}
 
         private void showImageUsingPictureBox()
         {

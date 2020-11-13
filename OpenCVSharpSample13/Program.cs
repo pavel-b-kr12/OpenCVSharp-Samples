@@ -7,11 +7,11 @@ namespace OpenCVSharpSample13
     {
         static void Main(string[] args)
         {
-            var img1 = new Mat(@"..\..\Images\left.png", ImreadModes.GrayScale);
+            var img1 = new Mat(@"..\..\Images\left.png", ImreadModes.Grayscale);
             Cv2.ImShow("Left", img1);
             Cv2.WaitKey(1); // do events
 
-            var img2 = new Mat(@"..\..\Images\right.png", ImreadModes.GrayScale);
+            var img2 = new Mat(@"..\..\Images\right.png", ImreadModes.Grayscale);
             Cv2.ImShow("Right", img2);
             Cv2.WaitKey(1); // do events
 

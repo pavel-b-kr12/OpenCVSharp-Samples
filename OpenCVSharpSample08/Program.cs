@@ -4,6 +4,7 @@ namespace OpenCVSharpSample08
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             using (var src = new Mat(@"..\..\Images\cvmorph.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
@@ -14,13 +15,14 @@ namespace OpenCVSharpSample08
                 var elementShape = MorphShapes.Rect;
                 var maxIterations = 10;
 
+
                 var openCloseWindow = new Window("Open/Close", image: dst);
                 var openCloseTrackbar = openCloseWindow.CreateTrackbar(
-                    name: "Iterations", value: 0, max: maxIterations * 2 + 1,
-                    callback: (pos, obj) =>
+                    trackbarName: "Iterations", initialPos: 0, max: maxIterations * 2 + 1,
+                    callback: (pos) =>
                     {
-                        var n = pos - maxIterations;
-                        var an = n > 0 ? n : -n;
+						var n = pos - maxIterations;
+						var an = n > 0 ? n : -n;
                         var element = Cv2.GetStructuringElement(
                                 elementShape,
                                 new Size(an * 2 + 1, an * 2 + 1),
@@ -40,13 +42,14 @@ namespace OpenCVSharpSample08
                             : string.Format("Close/Dilation followed by Erosion[{0}]", elementShape),
                             new Point(10, 15), HersheyFonts.HersheyPlain, 1, Scalar.Black);
                         openCloseWindow.Image = dst;
-                    });
+                    }
+					);
 
 
                 var erodeDilateWindow = new Window("Erode/Dilate", image: dst);
                 var erodeDilateTrackbar = erodeDilateWindow.CreateTrackbar(
-                    name: "Iterations", value: 0, max: maxIterations * 2 + 1,
-                    callback: (pos, obj) =>
+					trackbarName: "Iterations", initialPos: 0, max: maxIterations * 2 + 1,
+                    callback: (pos) =>
                     {
                         var n = pos - maxIterations;
                         var an = n > 0 ? n : -n;

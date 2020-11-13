@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample01", "OpenCVSharpSample01\OpenCVSharpSample01.csproj", "{DB0A75DB-08B4-4A50-9D8C-49FFD0DCA332}"
 EndProject
@@ -24,37 +24,37 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample03", "Open
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample04", "OpenCVSharpSample04\OpenCVSharpSample04.csproj", "{2E4A54ED-4E46-4182-8D96-E01E2D24C016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample04WinForms", "OpenCVSharpSample04WinForms\OpenCVSharpSample04WinForms.csproj", "{E1B29023-F1DA-469A-A422-EDFBE8821690}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample04WinForms_PictureBox", "OpenCVSharpSample04WinForms\OpenCVSharpSample04WinForms_PictureBox.csproj", "{E1B29023-F1DA-469A-A422-EDFBE8821690}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample05Wpf", "OpenCVSharpSample05Wpf\OpenCVSharpSample05Wpf.csproj", "{120D051F-868F-4382-994B-8BF53F3656B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample06WinForms", "OpenCVSharpSample06WinForms\OpenCVSharpSample06WinForms.csproj", "{772D4274-3316-403D-9665-B3FCCD1FDDCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample06WinForms_avi_cam", "OpenCVSharpSample06WinForms\OpenCVSharpSample06WinForms_avi_cam.csproj", "{772D4274-3316-403D-9665-B3FCCD1FDDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample07", "OpenCVSharpSample07\OpenCVSharpSample07.csproj", "{6612E06F-C529-4AA3-BA41-0C61AA39FBFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample07_iterate_mat", "OpenCVSharpSample07\OpenCVSharpSample07_iterate_mat.csproj", "{6612E06F-C529-4AA3-BA41-0C61AA39FBFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample08", "OpenCVSharpSample08\OpenCVSharpSample08.csproj", "{59173FFB-7A8C-474B-82FD-63B2D8FD9D93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample08_morf_Trackbar", "OpenCVSharpSample08\OpenCVSharpSample08_morf_Trackbar.csproj", "{59173FFB-7A8C-474B-82FD-63B2D8FD9D93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample09", "OpenCVSharpSample09\OpenCVSharpSample09.csproj", "{9666E6CB-BC58-466F-B30E-FDC32B21C17C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample09_Scale_resize_blur", "OpenCVSharpSample09\OpenCVSharpSample09_Scale_resize_blur.csproj", "{9666E6CB-BC58-466F-B30E-FDC32B21C17C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample10", "OpenCVSharpSample10\OpenCVSharpSample10.csproj", "{4328A19F-4DEF-4063-995E-8C73F93E6901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample10_histogram_bright_contrast", "OpenCVSharpSample10\OpenCVSharpSample10_histogram_bright_contrast.csproj", "{4328A19F-4DEF-4063-995E-8C73F93E6901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample11", "OpenCVSharpSample11\OpenCVSharpSample11.csproj", "{8AEA49BE-852E-4414-9CB9-B90AECEF038D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample11_clusters", "OpenCVSharpSample11\OpenCVSharpSample11_clusters.csproj", "{8AEA49BE-852E-4414-9CB9-B90AECEF038D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample12", "OpenCVSharpSample12\OpenCVSharpSample12.csproj", "{30ADD80A-750B-406F-8CA2-E28BC5618C2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample12_segments_watershed", "OpenCVSharpSample12\OpenCVSharpSample12_segments_watershed.csproj", "{30ADD80A-750B-406F-8CA2-E28BC5618C2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample13", "OpenCVSharpSample13\OpenCVSharpSample13.csproj", "{634FE3BA-B5AE-4431-AB01-72A82FA39A3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample13_keypoints", "OpenCVSharpSample13\OpenCVSharpSample13_keypoints.csproj", "{634FE3BA-B5AE-4431-AB01-72A82FA39A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample14", "OpenCVSharpSample14\OpenCVSharpSample14.csproj", "{7317B452-6EEF-405A-9804-2D91253A1EBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample14_BlobDetector", "OpenCVSharpSample14\OpenCVSharpSample14_BlobDetector.csproj", "{7317B452-6EEF-405A-9804-2D91253A1EBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample15", "OpenCVSharpSample15\OpenCVSharpSample15.csproj", "{8CEF7B5B-DB85-45FD-A2E7-4F3176A6D12A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample15_CascadeClassifier_face", "OpenCVSharpSample15\OpenCVSharpSample15_CascadeClassifier_face.csproj", "{8CEF7B5B-DB85-45FD-A2E7-4F3176A6D12A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample16", "OpenCVSharpSample16\OpenCVSharpSample16.csproj", "{70A91B3D-5FA9-4612-B0F1-D4E26A900304}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample16_BlobDetector_params", "OpenCVSharpSample16\OpenCVSharpSample16_BlobDetector_params.csproj", "{70A91B3D-5FA9-4612-B0F1-D4E26A900304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample17", "OpenCVSharpSample17\OpenCVSharpSample17.csproj", "{007FE582-6204-43BA-A69C-DDD53AE52AB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample17_FisherFaceRecognizer_train", "OpenCVSharpSample17\OpenCVSharpSample17_FisherFaceRecognizer_train.csproj", "{007FE582-6204-43BA-A69C-DDD53AE52AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample18", "OpenCVSharpSample18\OpenCVSharpSample18.csproj", "{CCBC6846-FC99-4F8D-9903-CC418644F7B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample18_OCR_text_train", "OpenCVSharpSample18\OpenCVSharpSample18_OCR_text_train.csproj", "{CCBC6846-FC99-4F8D-9903-CC418644F7B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample19", "OpenCVSharpSample19\OpenCVSharpSample19.csproj", "{83AF1032-7CDF-4D6A-8E87-B8D445C5B256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCVSharpSample19_barcode", "OpenCVSharpSample19\OpenCVSharpSample19_barcode.csproj", "{83AF1032-7CDF-4D6A-8E87-B8D445C5B256}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrereleaseTests", "PrereleaseTests\PrereleaseTests.csproj", "{EF45D409-5192-447D-904F-4E9074E4814F}"
 EndProject
@@ -247,5 +247,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC1A7167-E025-47B3-9D90-BCD93391AEBC}
 	EndGlobalSection
 EndGlobal

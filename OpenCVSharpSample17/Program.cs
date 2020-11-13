@@ -28,7 +28,7 @@ namespace OpenCVSharpSample17
                 {
                     images.Add(new ImageInfo
                     {
-                        Image = new Mat(imageFile.FullName, ImreadModes.GrayScale),
+                        Image = new Mat(imageFile.FullName, ImreadModes.Grayscale),
                         ImageId = imageId++,
                         ImageGroupId = groupId
                     });

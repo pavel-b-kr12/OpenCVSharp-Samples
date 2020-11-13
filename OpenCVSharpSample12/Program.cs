@@ -11,6 +11,7 @@ namespace OpenCVSharpSample12
             watershedExample();
         }
 
+
         /// <summary>
         /// https://github.com/Itseez/opencv_extra/blob/master/learning_opencv_v2/ch9_watershed.cpp
         /// </summary>
@@ -31,39 +32,41 @@ namespace OpenCVSharpSample12
             {
                 Image = srcCopy
             };
-
+			//MouseCallback mc = new MouseCallback(cc);
             var previousPoint = new Point(-1, -1);
-            sourceWindow.OnMouseCallback += (@event, x, y, flags) =>
-            {
-                if (x < 0 || x >= srcCopy.Cols || y < 0 || y >= srcCopy.Rows)
-                {
-                    return;
-                }
+            sourceWindow.SetMouseCallback((MouseEventTypes @event, int x, int y, MouseEventFlags flags, IntPtr userData)=>
+			{
+				if (x < 0 || x >= srcCopy.Cols || y < 0 || y >= srcCopy.Rows)
+				{
+					return;
+				}
 
-                if (@event == MouseEvent.LButtonUp || !flags.HasFlag(MouseEvent.FlagLButton))
-                {
-                    previousPoint = new Point(-1, -1);
-                }
-                else if (@event == MouseEvent.LButtonDown)
-                {
-                    previousPoint = new Point(x, y);
-                }
-                else if (@event == MouseEvent.MouseMove && flags.HasFlag(MouseEvent.FlagLButton))
-                {
-                    var pt = new Point(x, y);
-                    if (previousPoint.X < 0)
-                    {
-                        previousPoint = pt;
-                    }
+				if (@event == MouseEventTypes.LButtonUp || !flags.HasFlag(MouseEventFlags.LButton))
+				{
+					previousPoint = new Point(-1, -1);
+				}
+				else if (@event == MouseEventTypes.LButtonDown)
+				{
+					previousPoint = new Point(x, y);
+				}
+				else if (@event == MouseEventTypes.MouseMove && flags.HasFlag(MouseEventFlags.LButton))
+				{
+					var pt = new Point(x, y);
+					if (previousPoint.X < 0)
+					{
+						previousPoint = pt;
+					}
 
-                    Cv2.Line(img: markerMask, pt1: previousPoint, pt2: pt, color: Scalar.All(255), thickness: 5);
-                    Cv2.Line(img: srcCopy, pt1: previousPoint, pt2: pt, color: Scalar.All(255), thickness: 5);
-                    previousPoint = pt;
-                    sourceWindow.Image = srcCopy;
-                }
-            };
+					Cv2.Line(img: markerMask, pt1: previousPoint, pt2: pt, color: Scalar.All(255), thickness: 5);
+					Cv2.Line(img: srcCopy, pt1: previousPoint, pt2: pt, color: Scalar.All(255), thickness: 5);
+					previousPoint = pt;
+					sourceWindow.Image = srcCopy;
+				}
+			}
+			);
 
-            var rnd = new Random();
+
+			var rnd = new Random();
 
             for (; ; )
             {
@@ -167,5 +170,6 @@ namespace OpenCVSharpSample12
             Cv2.DestroyAllWindows();
             src.Dispose();
         }
-    }
+
+	}
 }

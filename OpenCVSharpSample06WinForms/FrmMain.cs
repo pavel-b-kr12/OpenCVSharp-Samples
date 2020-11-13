@@ -3,14 +3,15 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 using OpenCvSharp;
-using OpenCvSharp.UserInterface;
+using OpenCvSharp.Extensions;
 
 namespace OpenCVSharpSample06WinForms
 {
     public partial class FrmMain : Form
     {
-        private PictureBoxIpl _pictureBoxIpl1;
-        private BackgroundWorker _worker;
+		PictureBox pictureBox;
+
+		private BackgroundWorker _worker;
 
         public FrmMain()
         {
@@ -100,34 +101,34 @@ namespace OpenCVSharpSample06WinForms
 
         private void FrmMain_Load(object sender, System.EventArgs e)
         {
-            _pictureBoxIpl1 = new PictureBoxIpl
-            {
+			pictureBox = new PictureBox
+			{
                 AutoSize = true
             };
-            flowLayoutPanel1.Controls.Add(_pictureBoxIpl1);
+            flowLayoutPanel1.Controls.Add(pictureBox);
         }
 
         private void workerDoReadCamera(object sender, DoWorkEventArgs e)
         {
-            using (var capture = new VideoCapture(CaptureDevice.Any, index: 0))
-            {
-                var fps = getFps(capture);
-                capture.Fps = fps;
-                var interval = (int)(1000 / fps);
+			using (var capture = new VideoCapture(index: 0, VideoCaptureAPIs.ANY))
+			{
+				var fps = getFps(capture);
+				capture.Fps = fps;
+				var interval = (int)(1000 / fps);
 
-                using (var image = new Mat())
-                {
-                    while (_worker != null && !_worker.CancellationPending)
-                    {
-                        capture.Read(image);
-                        if (image.Empty())
-                            break;
+				using (var image = new Mat())
+				{
+					while (_worker != null && !_worker.CancellationPending)
+					{
+						capture.Read(image);
+						if (image.Empty())
+							break;
 
-                        _worker.ReportProgress(0, image);
-                        Thread.Sleep(interval);
-                    }
-                }
-            }
+						_worker.ReportProgress(0, image);
+						Thread.Sleep(interval);
+					}
+				}
+			}
         }
 
         private void workerDoReadVideo(object sender, DoWorkEventArgs e)
@@ -158,8 +159,9 @@ namespace OpenCVSharpSample06WinForms
             var image = e.UserState as Mat;
             if (image == null) return;
 
-            //Cv.Not(image, image);
-            _pictureBoxIpl1.RefreshIplImage(image);
+			//Cv.Not(image, image);
+			pictureBox.Image = image.ToBitmap();
+			//pictureBox.Invalidate(); //RefreshIplImage(image);
         }
 
         private void workerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

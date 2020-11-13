@@ -15,8 +15,8 @@ namespace OpenCVSharpSample01
                     {
                         var color = src.Get<Vec3b>(y, x);
                         var temp = color.Item0;
-                        color.Item0 = color.Item2; // B <- R
-                        color.Item2 = temp;        // R <- B
+						color.Item0 = (byte)(x % 256); // B <- R
+						color.Item2 = temp;        // R <- B
                         src.Set(y, x, color);
                     }
                 }

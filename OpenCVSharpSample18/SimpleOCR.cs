@@ -105,7 +105,7 @@ namespace OpenCVSharpSample18
                 var groupId = int.Parse(dir.Name);
                 foreach (var imageFile in dir.GetFiles(ext))
                 {
-                    var image = processTrainingImage(new Mat(imageFile.FullName, ImreadModes.GrayScale));
+                    var image = processTrainingImage(new Mat(imageFile.FullName, ImreadModes.Grayscale));
                     if (image == null)
                     {
                         continue;

@@ -1,3 +1,5 @@
+upd to .net 4.8
+
 OpenCVSharp Samples
 =======
 A collection of samples about using OpenCV in .NET applications.

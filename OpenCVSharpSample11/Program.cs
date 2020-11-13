@@ -106,7 +106,7 @@ namespace OpenCVSharpSample11
                             b: new Scalar(img.Cols * 0.05f, img.Rows * 0.05f));
                     }
 
-                    Cv2.RandShuffle(dst: points, iterFactor: 1, rng: rng);
+                    Cv2.RandShuffle(dst: points, iterFactor: 1,  rng: ref rng);
 
                     var labels = new Mat();
                     var centers = new Mat(rows: clustersCount, cols: 1, type: points.Type());
@@ -132,7 +132,7 @@ namespace OpenCVSharpSample11
                     for (var i = 0; i < samplesCount; i++)
                     {
                         var clusterIdx = labels.At<int>(i);
-                        Point ipt = points.At<Point2f>(i);
+                        Point ipt = (Point)points.At<Point2f>(i);
                         Cv2.Circle(
                             img: img,
                             center: ipt,
